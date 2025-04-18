@@ -16,41 +16,61 @@
 <body>
    <header>
     <div class="containers py-[17px]">
-        <div class="flex justify-around">
+        <div class="flex justify-around items-center">
             <img src="./images/logo-img.svg" alt="img">
-            <img src="./images/menu-img.svg" alt="img">
+
+                <button class=" flex sm:hidden ">
+                        <img src="./images/menu-img.svg" alt="img">
+                   </button>
+                <nav class="hidden sm:flex gap-[15px]">
+                    <a class="text-[rgba(34,52,61,1)] font-semibold text-[16px] leading-[28px]" href="/">Product</a>
+                    <a class="text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Customers</a>
+                    <a class="text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Pricing</a>
+                    <a class="text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Resources</a>
+                </nav>
+                 <div class="hidden sm:flex gap-[24px]">
+                    <button class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] bg-transparent rounded-[4px] border-[1px] border-[rgba(188,208,229,1)] px-[25px] py-[10px] text-[rgba(23,58,86,1)] font-semibold text-[16px]">
+                        Sign In
+                    </button>
+                    <button class="hover:bg-transparent rounded-[4px] hover:border-[1px] hover:border-[rgba(188,208,229,1)] bg-[rgba(2,137,122,1)] px-[25px] py-[10px] text-[rgba(255,255,255,1)] hover:text-[rgba(23,58,86,1)] font-semibold text-[16px]">
+                        Sign up
+                    </button>
+                    <button>
+                        <img src="./images/light-darsk-mode.svg" alt="img">
+                    </button>
+                 </div>
         </div>
     </div>
-
-    
-
 
    </header>
 <!-- Hero -->
  <main>
     <section>
-        <div class="containers">
-           <div>
-            <div class="pt-[29px] flex justify-center">
-                <img src="./images/social-media/amico.png" alt="img">
+        <div class="containers  pt-[25px] sm:pb-[114px] pb-[94px]">
+           <div class="sm:flex justify-around sm:flex-row-reverse">
+            <div class="sm:hidden pt-[29px] flex justify-center">
+                <img src="./images/hero-mobile/amico.png" alt="img">
                </div>
-               <div class="mt-[10px] text-center mx-auto w-[369px] pl-[24px] pr-[18px]">
+               <div class="hidden sm:flex">
+                <img src="./images/social-media/amico.png" alt="">
+               </div>
+               <div class="sm:mt-[145px] mt-[10px] sm:text-start sm:w-[518px] text-center mx-auto w-[369px] pl-[24px] pr-[18px]">
                 <h2 class="font-bold text-[36px] leading-[60px] text-[rgba(34,52,61,1)] mb-[16px]">Work at the speed
                     of thought</h2>
                     <p class="font-normal text-[18px] leading-[28px] text-[rgba(34,52,61,1)] mb-[32px]">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
-               </div>
-               <div class="justify-center flex gap-[28px] pb-[99px]">
-                <button class="hover:bg-transparent hover:text-[rgba(2,137,122,1)] rounded-[4px] px-[15px] py-[14px] bg-[rgba(2,137,122,1)] font-bold text-[16px] text-[rgba(255,255,255,1)]">
-                    Get started
-                </button>
-                <button  class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)]  rounded-[4px] flex gap-[3px] px-[15px] py-[14px] bg-transparent font-semibold text-[16px] text-[rgba(2,137,122,1)]">
-                    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2349 8.5243C16.9882 8.95667 16.9882 10.0433 16.2349 10.4757L2.19748 18.5328C1.44749 18.9633 0.512455 18.4219 0.512455 17.5571V1.44287C0.512455 0.578108 1.44749 0.0366851 2.19748 0.467164L16.2349 8.5243Z" fill="currentColor"/>
-                        </svg>
-                        
-                    <a href="#">Watch the Video</a>
-                </button>
-               </div>
+                    <div class="w-[335px] sm:justify-start justify-center flex gap-[28px] pb-[99px]">
+                      <button class="hover:bg-transparent hover:text-[rgba(2,137,122,1)] rounded-[4px] px-[15px] py-[14px] bg-[rgba(2,137,122,1)] font-bold text-[16px] text-[rgba(255,255,255,1)]">
+                          Get started
+                      </button>
+                      <button  class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)]  rounded-[4px] flex gap-[3px] px-[15px] py-[14px] bg-transparent font-semibold text-[16px] text-[rgba(2,137,122,1)]">
+                          <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2349 8.5243C16.9882 8.95667 16.9882 10.0433 16.2349 10.4757L2.19748 18.5328C1.44749 18.9633 0.512455 18.4219 0.512455 17.5571V1.44287C0.512455 0.578108 1.44749 0.0366851 2.19748 0.467164L16.2349 8.5243Z" fill="currentColor"/>
+                              </svg>
+                              
+                          <a href="#">Watch the Video</a>
+                      </button>
+                     </div>
+                  </div>
            </div>
         </div>
     </section>
