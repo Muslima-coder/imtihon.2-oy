@@ -57,12 +57,7 @@
  color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 137, 122, 1) ;
 }
-.price-img{
-  color: rgba(2, 137, 122, 1);
-}
-.price-img:hover{
-  color: rgba(255, 255, 255, 1);
-}
+
 .price-button{
   color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 137, 122, 1) ;
