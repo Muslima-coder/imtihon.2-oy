@@ -11,3 +11,10 @@ menuBtn.addEventListener("click", function () {
 menuCloseBtn.addEventListener("click", function () {
   menu.classList.remove("show");
 });
+// script.js
+const toggleBtn = document.getElementById('toggleBtn');
+const html = document.documentElement; // <html> element
+
+toggleBtn.addEventListener('click', () => {
+  html.classList.toggle('dark');
+});

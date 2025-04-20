@@ -1,567 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imtihon </title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="icon" href="./images/logo-img.svg">
-    <style type="text/tailwindcss">
-        @layer utilities {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>imtihon </title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./images/logo-img.svg">
+  <style type="text/tailwindcss">
+    @layer utilities {
           .content-auto {
             content-visibility: auto;
           }
         }
       </style>
 </head>
-<body>
-  <!-- Header part -->
-   <header>
-    <div class="containers py-[17px]">
-        <div class="flex justify-around items-center">
-           <a class="inline-block" href="./index.html"> <img src="./images/logo-img.svg" alt="img"></a>
 
-                <button class="menu-btn flex sm:hidden ">
-                        <img src="./images/menu-img.svg" alt="img">
-                   </button>
-                <nav class="hidden lg:flex gap-[15px]">
-                    <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Product</a>
-                    <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Customers</a>
-                    <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Pricing</a>
-                    <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px]" href="/">Resources</a>
-                </nav>
-                 <div class="hidden sm:flex gap-[24px]">
-                    <button class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] duration-300 bg-transparent rounded-[4px] border-[1px] border-[rgba(188,208,229,1)] px-[25px] py-[10px] text-[rgba(23,58,86,1)] font-semibold text-[16px]">
-                        Sign In
-                    </button>
-                    <button class="hover:bg-transparent rounded-[4px] hover:border-[1px] hover:border-[rgba(188,208,229,1)] duration-300 bg-[rgba(2,137,122,1)] px-[25px] py-[10px] text-[rgba(255,255,255,1)] hover:text-[rgba(23,58,86,1)] font-semibold text-[16px]">
-                        Sign up
-                    </button>
-                    <button>
-                        <img src="./images/light-darsk-mode.svg" alt="img">
-                    </button>
-                 </div>
+<body  class="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen flex flex-col ">
+  <!-- Header part -->
+  <header>
+    <div class="containers py-[17px]">
+      <div class="flex justify-around items-center">
+        <a class="inline-block" href="./index.html"> <img src="./images/logo-img.svg" alt="img"></a>
+
+        <button class="menu-btn flex sm:hidden ">
+          <img src="./images/menu-img.svg" alt="img">
+        </button>
+        <nav class="hidden lg:flex gap-[15px]">
+          <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[var(--color-text)] font-medium text-[16px] leading-[28px]"
+            href="/">Product</a>
+          <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[var(--color-text)] font-medium text-[16px] leading-[28px]"
+            href="/">Customers</a>
+          <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[var(--color-text)] font-medium text-[16px] leading-[28px]"
+            href="/">Pricing</a>
+          <a class="hover:text-[rgba(34,52,61,1)] hover:font-semibold duration-300 text-[var(--color-text)] font-medium text-[16px] leading-[28px]"
+            href="/">Resources</a>
+        </nav>
+        <div class="hidden sm:flex gap-[24px] ">
+          <button
+            class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] duration-300 bg-transparent rounded-[4px] border-[1px] border-[rgba(188,208,229,1)] px-[25px] py-[10px] text-[var(--color-text)] font-semibold text-[16px]">
+            Sign In
+          </button>
+          <button
+            class="hover:bg-transparent rounded-[4px] hover:border-[1px] hover:border-[rgba(188,208,229,1)] duration-300 bg-[rgba(2,137,122,1)] px-[25px] py-[10px] text-[rgba(255,255,255,1)] hover:text-[rgba(23,58,86,1)] font-semibold text-[16px]">
+            Sign up
+          </button>
+          <button id="toggleBtn" >
+            <img src="./images/light-darsk-mode.svg" alt="img">
+          </button>
         </div>
+      </div>
     </div>
+    <!-- menu -->
     <div class="menu show">
       <div class="menu-wrapper">
         <a href="/">
           <img class="menu-logo-img" src="./images/logo-img.svg" alt="Site Logo" width="300" height="150">
         </a>
-        <button class="menu-close-btn">
-          <img  src="./images/close.jpg" alt="Close img" width="50" height="50">
-        </button>
+        <div class="flex gap-[15px]">
+          <button  id="toggleBtn" >
+            <img src="./images/light-darsk-mode.svg" alt="img">
+          </button>
+          <button class="menu-close-btn">
+            <img src="./images/close.jpg" alt="Close img" width="50" height="50">
+          </button>
+        </div>
+
       </div>
       <div class="menu-links-wrapper">
-        <a class="menu-link-item"  href="/">Product</a>
-        <a class="menu-link-item"  href="/">Customers</a>
-        <a class="menu-link-item"  href="/">Pricing</a>
-        <a class="menu-link-item"  href="/">Resources</a>
+        <a class="menu-link-item" href="/">Product</a>
+        <a class="menu-link-item" href="/">Customers</a>
+        <a class="menu-link-item" href="/">Pricing</a>
+        <a class="menu-link-item" href="/">Resources</a>
       </div>
     </div>
-   </header>
-<!-- Hero -->
- <main>
+  </header>
+  <!-- Hero -->
+  <main>
     <section>
-        <div class="containers  pt-[25px] sm:pb-[114px] pb-[94pxg]">
-           <div class="lg:flex flex-col justify-around lg:flex-row-reverse">
-            <div class="sm:hidden pt-[29px] flex justify-center">
-                <img src="./images/hero-mobile/amico.png" alt="img">
-               </div>
-               <div class="hidden justify-start sm:justify-center sm:flex">
-                <img src="./images/social-media/amico.png" alt="">
-               </div>
-               <div class="sm:mt-[145px] mt-[10px] sm:text-start sm:w-[518px] text-center mx-auto w-[369px] pl-[24px] pr-[18px]">
-                <h2 class="font-bold text-[36px] leading-[60px] text-[rgba(34,52,61,1)] mb-[16px]">Work at the speed
-                    of thought</h2>
-                    <p class="font-normal text-[18px] leading-[28px] text-[rgba(34,52,61,1)] mb-[32px]">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
-                    <div class="w-[335px] sm:justify-start justify-center flex gap-[28px] pb-[99px]">
-                      <button class="duration-300 hover:bg-transparent hover:text-[rgba(2,137,122,1)] rounded-[4px] px-[15px] py-[14px] bg-[rgba(2,137,122,1)] font-bold text-[16px] text-[rgba(255,255,255,1)]">
-                          Get started
-                      </button>
-                      <a  class="duration-300 hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)]  rounded-[4px] flex gap-[3px] px-[15px] py-[14px] bg-transparent font-semibold text-[16px] text-[rgba(2,137,122,1)]" href="#">
-                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2349 8.5243C16.9882 8.95667 16.9882 10.0433 16.2349 10.4757L2.19748 18.5328C1.44749 18.9633 0.512455 18.4219 0.512455 17.5571V1.44287C0.512455 0.578108 1.44749 0.0366851 2.19748 0.467164L16.2349 8.5243Z" fill="currentColor"/>
-                          </svg>
-                          <span>Watch the Video</span>
-                      </a>
-                     </div>
-                  </div>
-           </div>
+      <div class="containers  pt-[25px] sm:pb-[114px] pb-[94pxg]">
+        <div class="lg:flex flex-col justify-around lg:flex-row-reverse">
+          <div class="sm:hidden pt-[29px] flex justify-center">
+            <img src="./images/hero-mobile/amico.png" alt="img">
+          </div>
+          <div class="hidden justify-start sm:justify-center sm:flex">
+            <img src="./images/social-media/amico.png" alt="">
+          </div>
+          <div
+            class="sm:mt-[145px] mt-[10px] sm:text-start sm:w-[518px] text-center mx-auto w-[369px] pl-[24px] pr-[18px]">
+            <h2 class="font-bold text-[36px] leading-[60px] text-[var(--color-text)] mb-[16px]">Work at the speed
+              of thought</h2>
+            <p class="font-normal text-[18px] leading-[28px] text-[var(--color-text)] mb-[32px]">Tools, tutorials, design
+              and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+            <div class="w-[335px] sm:justify-start justify-center flex gap-[28px] pb-[99px]">
+              <button
+                class="duration-300 hover:bg-transparent hover:text-[rgba(2,137,122,1)] rounded-[4px] px-[15px] py-[14px] bg-[rgba(2,137,122,1)] font-bold text-[16px] text-[rgba(255,255,255,1)]">
+                Get started
+              </button>
+              <a class="duration-300 hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)]  rounded-[4px] flex gap-[3px] px-[15px] py-[14px] bg-transparent font-semibold text-[16px] text-[rgba(2,137,122,1)]"
+                href="#">
+                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.2349 8.5243C16.9882 8.95667 16.9882 10.0433 16.2349 10.4757L2.19748 18.5328C1.44749 18.9633 0.512455 18.4219 0.512455 17.5571V1.44287C0.512455 0.578108 1.44749 0.0366851 2.19748 0.467164L16.2349 8.5243Z"
+                    fill="currentColor" />
+                </svg>
+                <span>Watch the Video</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Product part -->
-  <section class="product-container flex-col lg:h-[590px] sm:h-[800px] h-[1150px]">
+    <section class="product-container flex-col lg:h-[590px] sm:h-[800px] h-[1150px]">
       <div class="containers pt-[114px] ">
         <div class="lg:w-[530px] w-[331px] mx-auto">
-          <h2 class="mb-[50px] text-center text-[rgba(34,52,61,1)] text-[32px] font-bold">Product  was Built Specifically for You</h2>
+          <h2 class="mb-[50px] text-center text-[var(--color-text)] text-[32px] font-bold">Product was Built Specifically
+            for You</h2>
         </div>
-         
-        <div class=" ">
+
+        <div >
           <div class="sm:flex sm:justify-center ">
-            <ul class="lg:flex-nowrap lg:flex lg:w-[1095px] lg:gap-[48px] sm:flex sm:flex-wrap sm:gap-[40px] sm:w-[600px]">
-              <li class=" lg:text-start text-center w-[240px]  mx-auto mb-[32px]" >
-              
-                <div class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(2,137,122,1)] hover:text-[rgba(2,137,122,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(2,137,122,1)] rounded-[19px]">
-                <svg class=" m-auto" width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.1161 9.42829L0.973214 0.285435C0.866071 0.169363 0.723214 0.115791 0.571429 0.115791C0.5 0.115791 0.419643 0.133649 0.357143 0.160435C0.142857 0.249721 0 0.455077 0 0.687221V14.1158C0 14.3479 0.142857 14.5533 0.357143 14.6426C0.419643 14.6694 0.5 14.6872 0.571429 14.6872C0.723214 14.6872 0.866071 14.6247 0.973214 14.5176L3.75893 11.7319L5.46429 15.7676C5.58929 16.0533 5.91964 16.1961 6.21429 16.0711L7.79464 15.4015C8.08036 15.2765 8.22322 14.9461 8.09822 14.6515L6.30357 10.4015H9.71429C9.94643 10.4015 10.1518 10.2586 10.2411 10.0444C10.3304 9.83901 10.2857 9.58901 10.1161 9.42829Z" fill="currentColor"/>
-                  </svg> 
+            <ul
+              class="lg:flex-nowrap lg:flex lg:w-[1095px] lg:gap-[48px] sm:flex sm:flex-wrap sm:gap-[40px] sm:w-[600px]">
+              <li class=" lg:text-start text-center w-[240px]  mx-auto mb-[32px]">
+
+                <div
+                  class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(2,137,122,1)] hover:text-[rgba(2,137,122,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(2,137,122,1)] rounded-[19px]">
+                  <svg class=" m-auto" width="11" height="17" viewBox="0 0 11 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.1161 9.42829L0.973214 0.285435C0.866071 0.169363 0.723214 0.115791 0.571429 0.115791C0.5 0.115791 0.419643 0.133649 0.357143 0.160435C0.142857 0.249721 0 0.455077 0 0.687221V14.1158C0 14.3479 0.142857 14.5533 0.357143 14.6426C0.419643 14.6694 0.5 14.6872 0.571429 14.6872C0.723214 14.6872 0.866071 14.6247 0.973214 14.5176L3.75893 11.7319L5.46429 15.7676C5.58929 16.0533 5.91964 16.1961 6.21429 16.0711L7.79464 15.4015C8.08036 15.2765 8.22322 14.9461 8.09822 14.6515L6.30357 10.4015H9.71429C9.94643 10.4015 10.1518 10.2586 10.2411 10.0444C10.3304 9.83901 10.2857 9.58901 10.1161 9.42829Z"
+                      fill="currentColor" />
+                  </svg>
                 </div>
-               
-                <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[22px]">First click tests</strong>
-                <p class=" text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]">While most people enjoy casino gambling,</p>
+
+                <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[22px]">First click tests</strong>
+                <p class=" text-[var(--color-text)] font-normal text-[16px] leading-[26px]">While most people enjoy
+                  casino gambling,</p>
               </li>
-              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]" >
-                <div class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(77,141,255,1)] hover:text-[rgba(77,141,255,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(77,141,255,1)] rounded-[19px]">
-                  <svg class="m-auto" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.48214 5.47293L10.6518 6.01758L12.3929 5.49972V4.28543C12.3929 2.22293 10.6518 0.571149 8.57143 0.571149C6.5 0.571149 4.75 2.21401 4.75 4.25865V9.79436C4.75 10.3033 4.33929 10.7051 3.83929 10.7051C3.33929 10.7051 2.92857 10.3033 2.92857 9.79436V7.45508H0C0 9.80329 0 9.83008 0 9.83008C0 11.9461 1.71429 13.6604 3.83036 13.6604C5.92857 13.6604 7.66071 11.9729 7.66071 9.88365V4.41936C7.66071 3.91936 8.07143 3.50865 8.57143 3.50865C9.07143 3.50865 9.48214 3.91936 9.48214 4.41936V5.47293ZM14.2143 7.45508V9.91044C14.2143 10.4104 13.8036 10.8122 13.3036 10.8122C12.8036 10.8122 12.3929 10.4104 12.3929 9.91044V7.49972L10.6518 8.01758L9.48214 7.47294V9.86579C9.48214 11.964 11.2054 13.6604 13.3125 13.6604C15.4286 13.6604 17.1429 11.9461 17.1429 9.83008C17.1429 9.83008 17.1429 9.80329 17.1429 7.45508H14.2143Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                
-                  <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[22px]">Design surveys</strong>
-                <p class=" text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]">Sports betting, lottery and bingo playing for the fun</p>
+              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]">
+                <div
+                  class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(77,141,255,1)] hover:text-[rgba(77,141,255,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(77,141,255,1)] rounded-[19px]">
+                  <svg class="m-auto" width="18" height="14" viewBox="0 0 18 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.48214 5.47293L10.6518 6.01758L12.3929 5.49972V4.28543C12.3929 2.22293 10.6518 0.571149 8.57143 0.571149C6.5 0.571149 4.75 2.21401 4.75 4.25865V9.79436C4.75 10.3033 4.33929 10.7051 3.83929 10.7051C3.33929 10.7051 2.92857 10.3033 2.92857 9.79436V7.45508H0C0 9.80329 0 9.83008 0 9.83008C0 11.9461 1.71429 13.6604 3.83036 13.6604C5.92857 13.6604 7.66071 11.9729 7.66071 9.88365V4.41936C7.66071 3.91936 8.07143 3.50865 8.57143 3.50865C9.07143 3.50865 9.48214 3.91936 9.48214 4.41936V5.47293ZM14.2143 7.45508V9.91044C14.2143 10.4104 13.8036 10.8122 13.3036 10.8122C12.8036 10.8122 12.3929 10.4104 12.3929 9.91044V7.49972L10.6518 8.01758L9.48214 7.47294V9.86579C9.48214 11.964 11.2054 13.6604 13.3125 13.6604C15.4286 13.6604 17.1429 11.9461 17.1429 9.83008C17.1429 9.83008 17.1429 9.80329 17.1429 7.45508H14.2143Z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+
+                <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[22px]">Design surveys</strong>
+                <p class=" text-[var(--color-text)] font-normal text-[16px] leading-[26px]">Sports betting, lottery and
+                  bingo playing for the fun</p>
               </li>
-              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]" >
-                <div class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(116,10,118,1)] hover:text-[rgba(116,10,118,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(116,10,118,1)] rounded-[19px]">
-                  <svg class="m-auto" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 13.9729C8.14286 13.9729 8.28572 13.9194 8.39286 13.8122L13.9554 8.45508C14.0357 8.37472 16 6.58008 16 4.43722C16 1.82115 14.4018 0.258649 11.7321 0.258649C10.1696 0.258649 8.70536 1.49079 8 2.18722C7.29464 1.49079 5.83036 0.258649 4.26786 0.258649C1.59821 0.258649 0 1.82115 0 4.43722C0 6.58008 1.96429 8.37472 2.03571 8.43722L7.60714 13.8122C7.71429 13.9194 7.85714 13.9729 8 13.9729Z" fill="currentColor"/>
-                    </svg>
-                    
-                  </div>
-                
-                  
-                <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[22px]">Preference tests</strong>
-                <p class=" text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]">The Myspace page defines the individual.</p>
+              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]">
+                <div
+                  class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(116,10,118,1)] hover:text-[rgba(116,10,118,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(116,10,118,1)] rounded-[19px]">
+                  <svg class="m-auto" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 13.9729C8.14286 13.9729 8.28572 13.9194 8.39286 13.8122L13.9554 8.45508C14.0357 8.37472 16 6.58008 16 4.43722C16 1.82115 14.4018 0.258649 11.7321 0.258649C10.1696 0.258649 8.70536 1.49079 8 2.18722C7.29464 1.49079 5.83036 0.258649 4.26786 0.258649C1.59821 0.258649 0 1.82115 0 4.43722C0 6.58008 1.96429 8.37472 2.03571 8.43722L7.60714 13.8122C7.71429 13.9194 7.85714 13.9729 8 13.9729Z"
+                      fill="currentColor" />
+                  </svg>
+
+                </div>
+
+
+                <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[22px]">Preference tests</strong>
+                <p class=" text-[var(--color-text)] font-normal text-[16px] leading-[26px]">The Myspace page defines the
+                  individual.</p>
               </li>
-              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]" >
-                <div class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(240,62,61,1)] hover:text-[rgba(240,62,61,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(240,62,61,1)] rounded-[19px]">
-                  <svg class="m-auto" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.5714 1.25865H13.4286C13.5893 1.25865 13.7143 1.13365 13.7143 0.972935V0.401506C13.7143 0.240792 13.5893 0.115791 13.4286 0.115791H0.285714C0.125 0.115791 0 0.240792 0 0.401506V0.972935C0 1.13365 0.125 1.25865 0.285714 1.25865H1.14286C1.14286 4.56222 2.72321 6.95508 4.47321 8.11579C2.72321 9.27651 1.14286 11.6694 1.14286 14.9729H0.285714C0.125 14.9729 0 15.0979 0 15.2586V15.8301C0 15.9908 0.125 16.1158 0.285714 16.1158H13.4286C13.5893 16.1158 13.7143 15.9908 13.7143 15.8301V15.2586C13.7143 15.0979 13.5893 14.9729 13.4286 14.9729H12.5714C12.5714 11.6694 10.9911 9.27651 9.24107 8.11579C10.9911 6.95508 12.5714 4.56222 12.5714 1.25865ZM11.4286 1.25865C11.4286 2.56222 11.1339 3.71401 10.6696 4.68722H3.04464C2.58036 3.71401 2.28571 2.56222 2.28571 1.25865H11.4286ZM10.9196 12.1158H2.79464C3.45536 10.3926 4.64286 9.16936 5.83036 8.68722H7.88393C9.07143 9.16936 10.2589 10.3926 10.9196 12.1158Z" fill="currentColor"/>
-                    </svg>
-                    
-                    
-                  </div>
-                  
-                <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[22px]">Five second tests</strong>
-                <p class=" text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]">Personal choices and the overall personality of the person. </p>
+              <li class="lg:text-start text-center w-[240px] mx-auto mb-[32px]">
+                <div
+                  class="lg:mx-0 mx-auto flex justify-center hover:border-[rgba(240,62,61,1)] hover:text-[rgba(240,62,61,1)] hover:bg-transparent border-[1px] border-transparent duration-300 text-[white] mb-[24px] w-[50px] h-[50px] bg-[rgba(240,62,61,1)] rounded-[19px]">
+                  <svg class="m-auto" width="14" height="17" viewBox="0 0 14 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.5714 1.25865H13.4286C13.5893 1.25865 13.7143 1.13365 13.7143 0.972935V0.401506C13.7143 0.240792 13.5893 0.115791 13.4286 0.115791H0.285714C0.125 0.115791 0 0.240792 0 0.401506V0.972935C0 1.13365 0.125 1.25865 0.285714 1.25865H1.14286C1.14286 4.56222 2.72321 6.95508 4.47321 8.11579C2.72321 9.27651 1.14286 11.6694 1.14286 14.9729H0.285714C0.125 14.9729 0 15.0979 0 15.2586V15.8301C0 15.9908 0.125 16.1158 0.285714 16.1158H13.4286C13.5893 16.1158 13.7143 15.9908 13.7143 15.8301V15.2586C13.7143 15.0979 13.5893 14.9729 13.4286 14.9729H12.5714C12.5714 11.6694 10.9911 9.27651 9.24107 8.11579C10.9911 6.95508 12.5714 4.56222 12.5714 1.25865ZM11.4286 1.25865C11.4286 2.56222 11.1339 3.71401 10.6696 4.68722H3.04464C2.58036 3.71401 2.28571 2.56222 2.28571 1.25865H11.4286ZM10.9196 12.1158H2.79464C3.45536 10.3926 4.64286 9.16936 5.83036 8.68722H7.88393C9.07143 9.16936 10.2589 10.3926 10.9196 12.1158Z"
+                      fill="currentColor" />
+                  </svg>
+
+
+                </div>
+
+                <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[22px]">Five second tests</strong>
+                <p class=" text-[var(--color-text)] font-normal text-[16px] leading-[26px]">Personal choices and the
+                  overall personality of the person. </p>
               </li>
             </ul>
           </div>
           <div class="flex justify-center">
-            <button class="duration-300 px-[34px] py-[15px] hover:bg-transparent hover:text-[rgba(2,137,122,1)]
+            <button
+              class="duration-300 px-[34px] py-[15px] hover:bg-transparent hover:text-[rgba(2,137,122,1)]
             hover:border-[rgba(2,137,122,1)] rounded-[4px] border-[1px] border-transparent bg-[rgba(2,137,122,1)] font-bold text-[16px] text-[rgba(255,255,255,1)] ">
               SIGN UP NOW
             </button>
           </div>
         </div>
       </div>
-     </section>
+    </section>
 
-     <!-- Management part -->
-      <section>
-        <div class="containers pt-[100px]">
-          <ul>
-            <li class="sm:items-center sm:flex-row-reverse sm:flex sm:justify-around lg:mb-[150px]  mb-[100px]">
-              <div class="flex justify-center mb-[50px]">
-                <img src="./images/management-img1/amico.png" alt="img">
-              </div>
-              <div class="sm:w-[400px] w-[334px] sm:mx-0 mx-auto">
-                <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[16px]">Effortless Validation for</strong>
-              <h2 class="text-[rgba(34,52,61,1)] font-bold text-[32px] mb-[16px]">Management</h2>
-              <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
+    <!-- Management part -->
+    <section>
+      <div class="containers pt-[100px]">
+        <ul>
+          <li class="sm:items-center sm:flex-row-reverse sm:flex sm:justify-around lg:mb-[150px]  mb-[100px]">
+            <div class="flex justify-center mb-[50px]">
+              <img src="./images/management-img1/amico.png" alt="img">
+            </div>
+            <div class="sm:w-[400px] w-[334px] sm:mx-0 mx-auto">
+              <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[16px]">Effortless Validation
+                for</strong>
+              <h2 class="text-[var(--color-text)] font-bold text-[32px] mb-[16px]">Management</h2>
+              <p class="text-[var(--color-text)] text-[16px] leading-[26px]">The Myspace page defines the individual, his
+                or her characteristics, traits, personal choices and the overall personality of the person. </p>
               <div class="mt-[16px]">
                 <strong class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px] mb-[12px]">Accessory makers</strong>
-                <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+                <p class="text-[var(--color-text)] text-[16px] leading-[26px]">While most people enjoy casino gambling,
+                  sports betting, lottery and bingo playing for the fun</p>
               </div>
               <div class="mt-[16px]">
                 <strong class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px] mb-[12px]">Alterationists</strong>
-                <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">If you are looking for a new way to promote your business that won't cost you more money, </p>
+                <p class="text-[var(--color-text)] text-[16px] leading-[26px]">If you are looking for a new way to
+                  promote your business that won't cost you more money, </p>
               </div>
-              </div>
-            </li>
-            <li class="lg:flex-row sm:items-center sm:flex-row-reverse sm:flex sm:justify-around  lg:mb-[150px]   mb-[100px]">
-              <div class="flex justify-center mb-[50px]">
-                <img src="./images/managment-img2/amico.png" alt="img">
-              </div>
+            </div>
+          </li>
+          <li
+            class="lg:flex-row sm:items-center sm:flex-row-reverse sm:flex sm:justify-around  lg:mb-[150px]   mb-[100px]">
+            <div class="flex justify-center mb-[50px]">
+              <img src="./images/managment-img2/amico.png" alt="img">
+            </div>
             <div class="sm:w-[400px] sm:mx-0 w-[334px] mx-auto">
-              <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[16px]">Easier decision making for</strong>
-              <h2 class="text-[rgba(34,52,61,1)] font-bold text-[32px] mb-[16px]">Customer Support</h2>
-              <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.  </p>
+              <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[16px]">Easier decision making
+                for</strong>
+              <h2 class="text-[var(--color-text)] font-bold text-[32px] mb-[16px]">Customer Support</h2>
+              <p class="text-[var(--color-text)] text-[16px] leading-[26px]">The Myspace page defines the individual, his
+                or her characteristics, traits, personal choices and the overall personality of the person. </p>
               <div>
                 <div class="flex gap-[30px] mt-[16px] items-center">
-                  <div class="hover:text-[rgba(255,153,0,1)] hover:border-[rgba(255,153,0,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(255,153,0,1)] border-transparent border-[1px]">
-                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z" fill="currentColor"/>
-                      </svg>
+                  <div
+                    class="hover:text-[rgba(255,153,0,1)] hover:border-[rgba(255,153,0,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(255,153,0,1)] border-transparent border-[1px]">
+                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z"
+                        fill="currentColor" />
+                    </svg>
                   </div>
-                 
-                  <p class="text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]">Never worry about overpaying for your energy again. </p>                    
+
+                  <p class="text-[var(--color-text)] font-normal text-[16px] leading-[26px]">Never worry about overpaying
+                    for your energy again. </p>
                 </div>
                 <div class="flex gap-[30px] mt-[16px] items-center">
-                  <div class="hover:text-[rgba(240,62,61,1)] hover:border-[rgba(240,62,61,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(240,62,61,1)] border-transparent border-[1px]">
-                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z" fill="currentColor"/>
-                      </svg>
+                  <div
+                    class="hover:text-[rgba(240,62,61,1)] hover:border-[rgba(240,62,61,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(240,62,61,1)] border-transparent border-[1px]">
+                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z"
+                        fill="currentColor" />
+                    </svg>
                   </div>
-                    
-                  <p class="text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]"> We will only switch you to energy companies that  </p>                    
+
+                  <p class="text-[var(--color-text)] font-normal text-[16px] leading-[26px]"> We will only switch you to
+                    energy companies that </p>
                 </div>
                 <div class="flex gap-[30px] mt-[16px] items-center">
-                  <div class="hover:text-[rgba(77,141,255,1)] hover:border-[rgba(77,141,255,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(77,141,255,1)] border-transparent border-[1px]">
-                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z" fill="currentColor"/>
-                      </svg>
+                  <div
+                    class="hover:text-[rgba(77,141,255,1)] hover:border-[rgba(77,141,255,1)] hover:bg-transparent  flex justify-center w-[40px] h-[35px] duration-300  text-white rounded-[14px] bg-[rgba(77,141,255,1)] border-transparent border-[1px]">
+                    <svg class="m-auto" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7657 0.540581C15.4533 0.221499 14.9468 0.221499 14.6343 0.540581L5.04982 10.329L1.3657 6.56653C1.0533 6.24745 0.546796 6.24748 0.234328 6.56653C-0.0781093 6.88558 -0.0781093 7.40285 0.234328 7.72194L4.48414 12.0621C4.79645 12.3811 5.30332 12.3809 5.61551 12.0621L15.7657 1.69602C16.0781 1.37697 16.0781 0.859663 15.7657 0.540581Z"
+                        fill="currentColor" />
+                    </svg>
                   </div>
-                    
-                  <p class="text-[rgba(34,52,61,1)] font-normal text-[16px] leading-[26px]"> We will only switch you to energy companies that  </p>                    
+
+                  <p class="text-[var(--color-text)] font-normal text-[16px] leading-[26px]"> We will only switch you to
+                    energy companies that </p>
                 </div>
               </div>
             </div>
-             
+
+          </li>
+          <li class="sm:items-center sm:flex-row-reverse sm:flex sm:justify-around lg:mb-[150px] mb-[100px]">
+            <div class="flex justify-center mb-[50px]">
+              <img src="./images/managment-img3/amico.png" alt="img">
+            </div>
+            <div class="sm:w-[400px] sm:mx-0 mx-auto w-[334px]">
+              <strong class="mb-[8px] text-[var(--color-text)] font-semibold text-[16px]">Optimisation for</strong>
+              <h2 class="text-[var(--color-text)] font-bold text-[32px] mb-[16px]">Collaborative</h2>
+              <p class="text-[var(--color-text)] text-[16px] leading-[26px]">Few would argue that, despite the
+                advancements of feminism over the past three decades, women still face a double standard when it comes
+                to their behavior. </p>
+              <div class="mt-[16px]">
+                <strong class="text-[var(--color-text)] text-[16px] leading-[26px] mb-[12px]">Accessory makers</strong>
+                <p class="text-[var(--color-text)] text-[16px] leading-[26px]">While most people enjoy casino gambling,
+                  sports betting, lottery and bingo playing for the fun</p>
+              </div>
+              <div class="mt-[16px]">
+                <strong class="text-[var(--color-text)] text-[16px] leading-[26px] mb-[12px]">Alterationists</strong>
+                <p class="text-[var(--color-text)] text-[16px] leading-[26px]">If you are looking for a new way to
+                  promote your business that won't cost you more money, </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quick & Easy Process -->
+    <section class="quick-easy-bg lg:h-[389px] h-[200px]">
+      <div class="container pt-[67px] pb-[100px] sm:mx-auto">
+        <div class="lg:w-[542px] w-[350px] mx-auto mb-[39px] ">
+          <h2 class="text-center text-[var(--color-text)] font-bold text-[32px] lg:mb-[16px] mb-[8px]">Quick & Easy
+            Process</h2>
+          <p class="text-center text-[var(--color-text)] font-medium text-[16px] leading-[26px]">Do you require some help
+            for your project: Conception workshop, prototyping, marketing strategy, landing page, Ux/UI?</p>
+        </div>
+        <div class="lg:w-[963px] sm:w-[750px] mx-auto">
+          <ul class="sm:flex   sm:flex-wrap sm:gap-[40px] sm:justify-between sm:items-center">
+            <li class="w-[333px] mt-[32px] mx-auto flex  justify-between items-center gap-[20px]">
+              <div>
+                <img src="./images/ul-img1.svg" alt="img">
+              </div>
+              <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
+                <p class="px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I can take care
+                  of your pitch</p>
+              </div>
             </li>
-            <li class="sm:items-center sm:flex-row-reverse sm:flex sm:justify-around lg:mb-[150px] mb-[100px]">
-              <div class="flex justify-center mb-[50px]">
-                <img src="./images/managment-img3/amico.png" alt="img">
+            <li class="w-[333px] mx-auto mt-[32px] flex flex-row-reverse  justify-between items-center gap-[20px]">
+              <div>
+                <img src="./images/ul-img2.svg" alt="img">
               </div>
-             <div class="sm:w-[400px] sm:mx-0 mx-auto w-[334px]">
-              <strong class="mb-[8px] text-[rgba(34,52,61,1)] font-semibold text-[16px]">Optimisation for</strong>
-              <h2 class="text-[rgba(34,52,61,1)] font-bold text-[32px] mb-[16px]">Collaborative</h2>
-              <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.  </p>
-              <div class="mt-[16px]">
-                <strong class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px] mb-[12px]">Accessory makers</strong>
-                <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+              <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
+                <p class="px-[20px] text-center pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I
+                  can design you website</p>
               </div>
-              <div class="mt-[16px]">
-                <strong class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px] mb-[12px]">Alterationists</strong>
-                <p class="text-[rgba(34,52,61,1)] text-[16px] leading-[26px]">If you are looking for a new way to promote your business that won't cost you more money, </p>
+            </li>
+            <li class="w-[333px] mx-auto flex mt-[32px] justify-between items-center gap-[20px]">
+              <div>
+                <img src="./images/ul-img3.svg" alt="img">
               </div>
-             </div>
+              <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
+                <p class="text-center px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I
+                  can help marketing strategy</p>
+              </div>
+            </li>
+            <li class="w-[333px] mx-auto flex mt-[32px] flex-row-reverse  justify-between items-center gap-[20px]">
+              <div>
+                <img src="./images/ul-img4.svg" alt="img">
+              </div>
+              <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
+                <p class="text-center px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I
+                  can prototype your appy</p>
+              </div>
             </li>
           </ul>
         </div>
-      </section>
+        <div class="flex justify-center mt-[32px]">
+          <button
+            class="duration-300 hover:border-[rgba(2,137,122,1)] px-[34px] py-[15px] hover:bg-transparent hover:text-[rgba(2,137,122,1)] border-[1px] border-transparent  bg-[rgba(2,137,122,1)] rounded-[4px] py-[15px] px-[30px] text-[rgba(255,255,255,1)] font-bold text-[16px]">Contact
+            our expert</button>
+        </div>
+      </div>
+    </section>
 
-      <!-- Quick & Easy Process -->
-       <section class="quick-easy-bg lg:h-[389px] h-[200px]">
-        <div class="container pt-[67px] pb-[100px] sm:mx-auto">
-          <div class="lg:w-[542px] w-[350px] mx-auto mb-[39px] ">
-            <h2 class="text-center text-[rgba(34,52,61,1)] font-bold text-[32px] lg:mb-[16px] mb-[8px]">Quick & Easy Process</h2>
-            <p class="text-center text-rgba(34,52,61,1) font-medium text-[16px] leading-[26px]">Do you require some help for your project: Conception workshop, prototyping, marketing strategy, landing page, Ux/UI?</p>
+    <!-- Content part -->
+    <section class="sm:pt-[500px] lg:pb-[229px] lg:pt-[300px] pt-[700px]">
+      <div class="containers lg:px-[146px]">
+        <div class="w-[350px] lg:w-full lg:mx-0 mx-auto mb-[40px]">
+          <h2 class="mb-[8px] text-[var(--color-text)] font-bold text-[34px]">Contents Strategies</h2>
+          <p class="text-[var(--color-text)] font-medium text-[16px] leading-[26px]">We focus on ergonomics and meeting
+            you where you work. It's only a keystroke away. </p>
+        </div>
+        <div class=" lg:justify-start sm:flex  sm:justify-center ">
+          <ul class="lg:flex lg:flex-nowrap lg:gap-[32px] sm:flex sm:flex-wrap sm:justify-around sm:w-[800px]">
+            <li class="w-[350px] mx-auto flex flex-col justify-center mb-[32px]">
+              <img src="./images/content-item-img1.png" alt="img">
+              <div class="lg:text-start sm:text-center w-[294px] mt-[24px]">
+                <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[var(--color-text)]">By <span
+                    class="font-bold text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">Wahid Ari</span> | 03 March
+                  2019</p>
+                <h2
+                  class="hover:text-[rgba(2,137,122,1)] duration-3000 text-[var(--color-text)] text-[24px] font-bold leading-[40px]">
+                  Increasing Prosperity With Positive Thinking</h2>
+              </div>
+            </li>
+            <li class="w-[350px] flex mx-auto flex-col justify-center mb-[32px]">
+              <img src="./images/content-item-img2.png" alt="img">
+              <div class="lg:text-start ssm:text-center w-[294px] mt-[24px]">
+                <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[var(--color-text)]">By <span
+                    class="font-bold text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">Wahid Ari</span> | 03 March
+                  2019</p>
+                <h2
+                  class="hover:text-[rgba(2,137,122,1)] duration-3000 text-[var(--color-text)] text-[24px] font-bold leading-[40px]">
+                  Motivation Is The First Step To Success</h2>
+              </div>
+            </li>
+            <li class="w-[350px] mx-auto  flex flex-col justify-center mb-[32px]">
+              <img src="./images/content-item-img3.png" alt="img">
+              <div class="lg:text-start ssm:text-center w-[294px] mt-[24px]">
+                <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[var(--color-text)]">By <span
+                    class="font-bold text-[16px] leading-[28px] text-[var(--color-text)]">Wahid Ari</span> | 03 March
+                  2019</p>
+                <h2
+                  class="hover:text-[rgba(2,137,122,1)] duration-3000 text-[var(--color-text)] text-[24px] font-bold leading-[40px]">
+                  Success Steps For Your Personal Or Business</h2>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- price table part -->
+    <section>
+      <div class="containers">
+        <div class=" sm:py-[100px]  lg:pb-[150px] lg:px-[143px]">
+          <div class="w-[213px] mb-[74px] mx-auto">
+            <h2 class="text-[var(--color-text)] font-bold text-[34px] mb-[8px]">Price Table</h2>
+            <p class="text-[var(--color-text)] font-medium text-[16px]">We offer competitive price</p>
           </div>
-          <div class="lg:w-[963px] sm:w-[750px] mx-auto">
-            <ul class="sm:flex   sm:flex-wrap sm:gap-[40px] sm:justify-between sm:items-center" >
-              <li  class="w-[333px] mt-[32px] mx-auto flex  justify-between items-center gap-[20px]">
-                <div>
-                 <img src="./images/ul-img1.svg" alt="img">
-                </div>
-                <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
-                  <p class="px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I can take care of your pitch</p>
+          <div>
+            <!-- Ul -->
+            <ul
+              class=" lg:flex lg:flex-nowrap lg:w-full lg:gap-[71px] sm:flex sm:justify-center sm:flex-wrap sm:mx-auto sm:w-[800px]">
+              <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
+                <div class="w-[180px] mx-auto pt-[24px] text-center">
+                  <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Free</strong>
+                  <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
+                  <div
+                    class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
+                    <strong class=" font-bold text-[70px] tracking-[0.2px]">0</strong>
+                    <div>
+                      <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
+                      <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
+                    </div>
+                  </div>
+                  <div class="mb-[38px]">
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Only 2 Operators</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p>
+                  </div>
+                  <button
+                    class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order
+                    Now</button>
                 </div>
               </li>
-              <li  class="w-[333px] mx-auto mt-[32px] flex flex-row-reverse  justify-between items-center gap-[20px]">
-                <div>
-                 <img src="./images/ul-img2.svg" alt="img">
-                </div>
-                <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
-                  <p class="px-[20px] text-center pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I can design you website</p>
+              <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
+                <div class="w-[180px] mx-auto pt-[24px] text-center">
+                  <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Standard</strong>
+                  <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
+                  <div
+                    class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
+                    <strong class=" font-bold text-[70px] tracking-[0.2px]">5</strong>
+                    <div>
+                      <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
+                      <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
+                    </div>
+                  </div>
+                  <div class="mb-[38px]">
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">5+ Operators</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p>
+                  </div>
+                  <button
+                    class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order
+                    Now</button>
                 </div>
               </li>
-              <li  class="w-[333px] mx-auto flex mt-[32px] justify-between items-center gap-[20px]">
-                <div>
-                 <img src="./images/ul-img3.svg" alt="img">
-                </div>
-                <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
-                  <p class="text-center px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I can help marketing strategy</p>
-                </div>
-              </li>
-              <li  class="w-[333px] mx-auto flex mt-[32px] flex-row-reverse  justify-between items-center gap-[20px]">
-                <div>
-                 <img src="./images/ul-img4.svg" alt="img">
-                </div>
-                <div class="rounded-[26px] w-[220px] bg-white item-shadow ">
-                  <p class="text-center px-[20px] pt-[12px] pb-[4px] text-[rgba(47,40,30,1)] font-medium text-[16px]">I can prototype your appy</p>
+              <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
+                <div class="w-[180px] mx-auto pt-[24px] text-center">
+                  <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Premium</strong>
+                  <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
+                  <div
+                    class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
+                    <strong class=" font-bold text-[70px] tracking-[0.2px]">10</strong>
+                    <div>
+                      <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
+                      <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
+                    </div>
+                  </div>
+                  <div class="mb-[38px]">
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">10+ Operators</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
+                    <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p>
+                  </div>
+                  <button
+                    class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order
+                    Now</button>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="flex justify-center mt-[32px]">
-            <button class="duration-300 hover:border-[rgba(2,137,122,1)] px-[34px] py-[15px] hover:bg-transparent hover:text-[rgba(2,137,122,1)] border-[1px] border-transparent  bg-[rgba(2,137,122,1)] rounded-[4px] py-[15px] px-[30px] text-[rgba(255,255,255,1)] font-bold text-[16px]">Contact our expert</button>
-          </div>
         </div>
-       </section>
+      </div>
+    </section>
 
-       <!-- Content part -->
-        <section class="sm:pt-[500px] lg:pb-[229px] lg:pt-[300px] pt-[700px]">
-          <div class="containers lg:px-[146px]">
-            <div class="w-[350px] lg:w-full lg:mx-0 mx-auto mb-[40px]">
-              <h2 class="mb-[8px] text-[rgba(34,52,61,1)] font-bold text-[34px]">Contents Strategies</h2>
-              <p class="text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[26px]">We focus on ergonomics and meeting you where you work. It's only a keystroke away. </p>
-            </div>
-            <div class=" lg:justify-start sm:flex  sm:justify-center ">
-              <ul class="lg:flex lg:flex-nowrap lg:gap-[32px] sm:flex sm:flex-wrap sm:justify-around sm:w-[800px]">
-                <li class="w-[350px] mx-auto flex flex-col justify-center mb-[32px]">
-                  <img src="./images/content-item-img1.png" alt="img">
-                  <div class="lg:text-start sm:text-center w-[294px] mt-[24px]">
-                    <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">By <span class="font-bold text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">Wahid Ari</span> | 03 March 2019</p>
-                 <h2 class="hover:text-[rgba(2,137,122,1)] duration-3000 text[rgba(34,52,61,1)] text-[24px] font-bold leading-[40px]">Increasing Prosperity With Positive Thinking</h2>
-                  </div>
-                </li>
-                <li class="w-[350px] flex mx-auto flex-col justify-center mb-[32px]">
-                  <img src="./images/content-item-img2.png" alt="img">
-                  <div class="lg:text-start ssm:text-center w-[294px] mt-[24px]">
-                    <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">By <span class="font-bold text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">Wahid Ari</span> | 03 March 2019</p>
-                    <h2 class="hover:text-[rgba(2,137,122,1)] duration-3000 text[rgba(34,52,61,1)] text-[24px] font-bold leading-[40px]">Motivation Is The First Step To Success</h2>
-                  </div>
-                </li>
-                <li class="w-[350px] mx-auto  flex flex-col justify-center mb-[32px]">
-                  <img src="./images/content-item-img3.png" alt="img">
-                  <div class="lg:text-start ssm:text-center w-[294px] mt-[24px]">
-                    <p class="mb-[12px] font-normal text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">By <span class="font-bold text-[16px] leading-[28px] text-[rgba(34,52,61,1)]">Wahid Ari</span> | 03 March 2019</p>
-                    <h2 class="hover:text-[rgba(2,137,122,1)] duration-3000 text[rgba(34,52,61,1)] text-[24px] font-bold leading-[40px]">Success Steps For Your Personal Or Business</h2>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <!-- price table part -->
-         <section>
-          <div class="containers">
-            <div class=" sm:py-[100px]  lg:pb-[150px] lg:px-[143px]">
-              <div class="w-[213px] mb-[74px] mx-auto">
-                <h2 class="text-[rgba(34,52,61,1)] font-bold text-[34px] mb-[8px]">Price Table</h2>
-                <p class="text-[rgba(34,52,61,1)] font-medium text-[16px]">We offer competitive price</p>
-              </div>
-              <div>
-                <!-- Ul -->
-                <ul class=" lg:flex lg:flex-nowrap lg:w-full lg:gap-[71px] sm:flex sm:justify-center sm:flex-wrap sm:mx-auto sm:w-[800px]">
-                   <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
-                    <div class="w-[180px] mx-auto pt-[24px] text-center">
-                      <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Free</strong>
-                      <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
-                      <div class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
-                        <strong class=" font-bold text-[70px] tracking-[0.2px]">0</strong>
-                        <div>
-                          <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
-                          <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
-                        </div>
-                      </div>
-                      <div class="mb-[38px]">
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Only 2 Operators</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p> 
-                      </div>
-                      <button class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order Now</button>
-                    </div>
-                   </li>
-                   <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
-                    <div class="w-[180px] mx-auto pt-[24px] text-center">
-                      <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Standard</strong>
-                      <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
-                      <div class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
-                          <strong class=" font-bold text-[70px] tracking-[0.2px]">5</strong>
-                          <div>
-                            <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
-                            <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
-                          </div>
-                      </div>
-                      <div class="mb-[38px]">
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">5+ Operators</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p> 
-                      </div>
-                      <button class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order Now</button>
-                    </div>
-                   </li>
-                   <li class="price-item-br w-[322px] h-[456px] mx-auto my-[32px]">
-                    <div class="w-[180px] mx-auto pt-[24px] text-center">
-                      <strong class="  font-bold text-[24px] leading-[40px]  mb-[8px]">Premium</strong>
-                      <p class="  font-normal text-[16px] leading-[40px]">Brief price description</p>
-                      <div class="flex items-center text-start gap-[8px] duration-300 text-[rgba(2,137,122,1)] hover:text-white">
-                        <strong class=" font-bold text-[70px] tracking-[0.2px]">10</strong>
-                        <div>
-                          <span class=" font-bold text-[24px] leading-[30px] tracking-[0.1px]">$</span>
-                          <p class="text-[rgba(175,175,175,1)] font-normal text-[16px] leading-[19px]">Per / month</p>
-                        </div>
-                      </div>
-                      <div class="mb-[38px]">
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">10+ Operators</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Notifications</p>
-                        <p class=" text-[16px] leading-[22px] mb-[16px]">Landing Pages</p> 
-                      </div>
-                      <button class="price-button font-semibold text-[18px] py-[11px] px-[18px] rounded-[4px] border-[1px] ">Order Now</button>
-                    </div>
-                   </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-         </section>
-
-         <!-- Client comment -->
-          <section>
-            <div class="containers pt-[99px] lg:py-[150px]">
-              <div class="lg:w-[537px] lg:mb-[51px] w-[325px] mx-auto">
-                <h2 class="lg:text-center text-[rgba(34 52,61,1)] font-bold text-[34px] leading-[57px] mb-[8px]" >What Clients Say</h2>
-                <p class="text-center text-[rgba(34,52,61,1)] font-medium text-[16px] leading-[28px] tracking-[0.2px]">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>
-              </div>
-              <div>
-                <ul class="lg:gap-[64px] lg:flex lg:w-full sm:mx-auto sm:gap-[30px] sm:flex sm:flex-wrap sm:w-[700px]">
-                  <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]" >
-                    <div class="w-[275px] px-[26px]">
-                      <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
-                      <p class="pb-[16px] text-[rgba(50,69,79,1)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">Product helps you see how many 
-                        more days you need to work to 
-                        reach your financial goal.</p>
-                        <div class="flex gap-[14px] mb-[23px]">
-                          <img src="./images/clients-comment-img1.svg" alt="img">
-                          <div>
-                            <strong class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid Ari</strong>
-                          <p class="text-[rgba(37, 43, 66, 1)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">Designer</p>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]" >
-                    <div class="w-[275px] px-[26px]">
-                      <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
-                      <p class="pb-[16px] text-[rgba(115,115,115,1)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">Product helps you see how many 
-                        more days you need to work to 
-                        reach your financial goal.</p>
-                        <div class="flex gap-[14px] mb-[23px]">
-                          <img src="./images/clients-comment-img2.svg" alt="img">
-                          <div>
-                            <strong class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid Ari</strong>
-                          <p class="text-[rgba(37, 43, 66, 1)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">FrontEnd</p>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]" >
-                    <div class="w-[275px] px-[26px]">
-                      <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
-                      <p class="pb-[16px] text-[rgba(115,115,115,1)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">Product helps you see how many 
-                        more days you need to work to 
-                        reach your financial goal.</p>
-                        <div class="flex gap-[14px] mb-[23px]">
-                          <img src="./images/clients-comment-img3.svg" alt="img">
-                          <div>
-                            <strong class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid Ari</strong>
-                          <p class="text-[rgba(37, 43, 66, 1)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">Analys</p>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <!-- Join 100 -->
-           <section>
-            <div class="container py-[100px] sm:mx-auto">
-              <div class="duration-300 hover:bg-transparent bg-[rgba(2,137,122,1)] hover:text-[rgba(2,137,122,1)] hover:border-[rgba(2,137,122,1)] border-[3px] border-transparent text-[rgba(255,255,255,1)] lg:w-[968px] lg:h-[345px] w-[371px] h-[688px]  mx-auto rounded-[32px]">
-                <div class="lg:w-full w-[328px] mx-auto pt-[17px] lg:mx-0 lg:items-center lg:flex lg:justify-around lg:gap-[10px]">
+    <!-- Client comment -->
+    <section>
+      <div class="containers pt-[99px] lg:py-[150px]">
+        <div class="lg:w-[537px] lg:mb-[51px] w-[325px] mx-auto">
+          <h2 class="lg:text-center text-[var(--color-text)] font-bold text-[34px] leading-[57px] mb-[8px]">What Clients
+            Say</h2>
+          <p class="text-center text-[var(--color-text)] font-medium text-[16px] leading-[28px] tracking-[0.2px]">
+            Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian
+            mechanics </p>
+        </div>
+        <div>
+          <ul class="lg:gap-[64px] lg:flex lg:w-full sm:mx-auto sm:gap-[30px] sm:flex sm:flex-wrap sm:w-[700px]">
+            <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]">
+              <div class="w-[275px] px-[26px]">
+                <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
+                <p class="pb-[16px] text-[var(--color-text)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">
+                  Product helps you see how many
+                  more days you need to work to
+                  reach your financial goal.</p>
+                <div class="flex gap-[14px] mb-[23px]">
+                  <img src="./images/clients-comment-img1.svg" alt="img">
                   <div>
-                    <h2 class="lg:w-[510px] lg:text-start text-center font-semibold text-[32px] leading-[151%]">
-                      Join 100 Compannies who boost their business with Product
-                    </h2>
-                      <div class="lg:mx-0 lg:mt-[98px] w-[154px] mx-auto mt-[104px]">
-                        <button class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] border-[2px] border-[rgba(2,137,122,1)]  rounded-[8px] bg-[rgba(255,255,255,1)] py-[10px] px-[34px] text-[rgba(2,137,122,1)] font-semibold text-[20px]">Get This</button>
-                      </div>
+                    <strong
+                      class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid
+                      Ari</strong>
+                    <p class="text-[var(--color-text)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">
+                      Designer</p>
                   </div>
-                    <div class="lg:mt-[10px] mt-[32px]">
-                      <img src="./images/join-deks-img.png" alt="img" width="351" >
-                    </div>
                 </div>
               </div>
-            </div>
-           </section>
- </main>
- <!-- Footer -->
- <footer>
-  <div class="containers">
-    <div class="items-center sm:text-start text-center sm:flex-wrap sm:flex sm:gap-[100px] sm:justify-center sm:w-[800px]  lg:w-[1050px] sm:items-start mx-auto w-[325px]">
-      <div>
-        <a class="inline-block  mb-[25px]" href="./index.html">
-          <img src="./images/logo-img.svg" alt="logo">
-        </a>
-        <div class="justify-center flex gap-[16px]">
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20.0156" r="20" fill="#EDFFFC"/>
-              <path d="M25 10.0156H15C12.2386 10.0156 10 12.2542 10 15.0156V25.0156C10 27.777 12.2386 30.0156 15 30.0156H25C27.7614 30.0156 30 27.777 30 25.0156V15.0156C30 12.2542 27.7614 10.0156 25 10.0156Z" stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z" stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M25.5 14.5156H25.51" stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="20" fill="#EDFFFC"/>
-              <path d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z" stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="20" fill="#EDFFFC"/>
-              <path d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z" stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+            </li>
+            <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]">
+              <div class="w-[275px] px-[26px]">
+                <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
+                <p class="pb-[16px] text-[var(--color-text)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">
+                  Product helps you see how many
+                  more days you need to work to
+                  reach your financial goal.</p>
+                <div class="flex gap-[14px] mb-[23px]">
+                  <img src="./images/clients-comment-img2.svg" alt="img">
+                  <div>
+                    <strong
+                      class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid
+                      Ari</strong>
+                    <p class="text-[var(--color-text)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">
+                      FrontEnd</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="client-comment-item w-[327px] h-[250px] mx-auto my-[32px]">
+              <div class="w-[275px] px-[26px]">
+                <img class="pt-[28px] pb-[16px]" src="./images/stars-img.svg" alt="img">
+                <p class="pb-[16px] text-[var(--color-text)] font-normal text-[16px] leading-[28px] tracking-[0.2px]">
+                  Product helps you see how many
+                  more days you need to work to
+                  reach your financial goal.</p>
+                <div class="flex gap-[14px] mb-[23px]">
+                  <img src="./images/clients-comment-img3.svg" alt="img">
+                  <div>
+                    <strong
+                      class="text-[rgba(2,137,122,1)] font-semibold text-[16px] leading-[24px] tracking-[0.2px]">Wahid
+                      Ari</strong>
+                    <p class="text-[rgba(37, 43, 66, 1)] font-medium text-[14px] leading-[24px] tracking-[0.2px]">Analys
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="sm:pt-[0px] pt-[31px]">
-        <strong class="font-medium text-[20px] leading-[30px] ">Resource</strong>
-        <p class="font-normal text-[16px] leading-[35px] text-[rgba(34,52,61,1)]">About Us
-          <br>
-          Blog
-          <br>
-          Contact
-          <br>
-          FAQ</p>
+    </section>
+
+    <!-- Join 100 -->
+    <section>
+      <div class="container py-[100px] sm:mx-auto">
+        <div
+          class="duration-300 hover:bg-transparent bg-[rgba(2,137,122,1)] hover:text-[rgba(2,137,122,1)] hover:border-[rgba(2,137,122,1)] border-[3px] border-transparent text-[rgba(255,255,255,1)] lg:w-[968px] lg:h-[345px] w-[371px] h-[688px]  mx-auto rounded-[32px]">
+          <div
+            class="lg:w-full w-[328px] mx-auto pt-[17px] lg:mx-0 lg:items-center lg:flex lg:justify-around lg:gap-[10px]">
+            <div>
+              <h2 class="lg:w-[510px] lg:text-start text-center font-semibold text-[32px] leading-[151%]">
+                Join 100 Compannies who boost their business with Product
+              </h2>
+              <div class="lg:mx-0 lg:mt-[98px] w-[154px] mx-auto mt-[104px]">
+                <button
+                  class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] border-[2px] border-[rgba(2,137,122,1)]  rounded-[8px] bg-[rgba(255,255,255,1)] py-[10px] px-[34px] text-[rgba(2,137,122,1)] font-semibold text-[20px]">Get
+                  This</button>
+              </div>
+            </div>
+            <div class="lg:mt-[10px] mt-[32px]">
+              <img src="./images/join-deks-img.png" alt="img" width="351">
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="sm:py-[0px] py-[32px]">
-        <strong class="font-medium text-[20px] leading-[30px] ">Legal Stuff</strong>
-        <p class="font-normal text-[16px] leading-[35px] text-[rgba(34,52,61,1)]">Disclaimer
-          <br>
-          Financing
-          <br>
-          Privacy Policy
-          <br>
-          Terms of Service</p>
-      </div>
-      <div class="w-[325px]" >
-        <strong class="font-medium text-[20px] leading-[30px]  ">knowing you're always on the best energy deal. 
-        </strong>
-        <form class="mt-[34px] sm:flex-col sm:flex"  action="https://htmlacademy.ru" method="post" autocomplete="off">
-          <input type="text"
-          name="name"  aria-label="name" required minlength="2" maxlength="20"
-          class="w-[325px] h-[48px] rounded-[4px] border border-[rgba(188,208,229,1)] focus:outline-none focus:border-[rgba(2,137,122,1)] pl-[16px] focus:ring-2 focus:ring-[rgba(2,137,122,0.4)] transition duration-300"
-        />
-          <button  type="submit"  class=" mt-[21px]  mb-[44px] w-[135px] hover:text-[rgba(2,137,122,1)] hover:bg-transparent hover:border-[rgba(2,137,122,1)] border-[2px] border-transparent py-[8px] px-[15px] font-bold text-[16px] text-[rgba(255,255,255,1)] bg-[rgba(2,137,122,1)] rounded-[4px]">Sign up Now</button>
-        </form>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="containers">
+      <div
+        class="items-center sm:text-start text-center sm:flex-wrap sm:flex sm:gap-[100px] sm:justify-center sm:w-[800px]  lg:w-[1050px] sm:items-start mx-auto w-[325px]">
+        <div>
+          <a class="inline-block  mb-[25px]" href="./index.html">
+            <img src="./images/logo-img.svg" alt="logo">
+          </a>
+          <div class="justify-center flex gap-[16px]">
+            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20.0156" r="20" fill="#EDFFFC" />
+                <path
+                  d="M25 10.0156H15C12.2386 10.0156 10 12.2542 10 15.0156V25.0156C10 27.777 12.2386 30.0156 15 30.0156H25C27.7614 30.0156 30 27.777 30 25.0156V15.0156C30 12.2542 27.7614 10.0156 25 10.0156Z"
+                  stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z"
+                  stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M25.5 14.5156H25.51" stroke="#02897A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+                <path
+                  d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z"
+                  stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+                <path
+                  d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+                  stroke="#02897A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="sm:pt-[0px] pt-[31px]">
+          <strong class="font-medium text-[20px] leading-[30px] ">Resource</strong>
+          <p class="font-normal text-[16px] leading-[35px] text-[var(--color-text)]">About Us
+            <br>
+            Blog
+            <br>
+            Contact
+            <br>
+            FAQ
+          </p>
+        </div>
+        <div class="sm:py-[0px] py-[32px]">
+          <strong class="font-medium text-[20px] leading-[30px] ">Legal Stuff</strong>
+          <p class="font-normal text-[16px] leading-[35px] text-[var(--color-text)]">Disclaimer
+            <br>
+            Financing
+            <br>
+            Privacy Policy
+            <br>
+            Terms of Service
+          </p>
+        </div>
+        <div class="w-[325px]">
+          <strong class="font-medium text-[20px] leading-[30px]  ">knowing you're always on the best energy deal.
+          </strong>
+          <form class="mt-[34px] sm:flex-col sm:flex" action="https://htmlacademy.ru" method="post" autocomplete="off">
+            <input type="text" name="name" aria-label="name" required minlength="2" maxlength="20"
+              class="w-[325px] h-[48px] rounded-[4px] border border-[rgba(188,208,229,1)] focus:outline-none focus:border-[rgba(2,137,122,1)] pl-[16px] focus:ring-2 focus:ring-[rgba(2,137,122,0.4)] transition duration-300">
+            <button type="submit"
+              class=" mt-[21px]  mb-[44px] w-[135px] hover:text-[rgba(2,137,122,1)] hover:bg-transparent hover:border-[rgba(2,137,122,1)] border-[2px] border-transparent py-[8px] px-[15px] font-bold text-[16px] text-[rgba(255,255,255,1)] bg-[rgba(2,137,122,1)] rounded-[4px]">Sign
+              up Now</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="sm:mx-auto">
-    <p class= " pb-[45px] font-medium text-center text-[14px] leading-[30px] text-[rgba(34,52,61,1)]">Made With Love By Product All Right Reserved </p>
-  </div>
- </footer>
+    <div class="sm:mx-auto">
+      <p class=" pb-[45px] font-medium text-center text-[14px] leading-[30px] text-[rgba(34,52,61,1)]">Made With Love By
+        Product All Right Reserved </p>
+    </div>
+  </footer>
 
 
 
 
- <script src="./js/main.js"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <script src="./js/main.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
           }
         }
-      </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
+
 </html>
