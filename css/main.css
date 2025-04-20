@@ -90,7 +90,13 @@
   right: -100%;
   padding: 13px 7px;
   transition: all 0.4s;
+  display: none; 
 }
+
+.menu.show {
+  display: block; /* Button bosilganda ko‘rsatiladi */
+}
+
 .menu-logo-img{
   padding: 0 15px;
 }
@@ -119,7 +125,4 @@
 }
 .menu-link-item:hover{
   color:blue;
-}
-.show{
-right: 0;
 }
