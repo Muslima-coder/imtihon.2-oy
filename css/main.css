@@ -126,3 +126,6 @@
 .menu-link-item:hover{
   color:blue;
 }
+.show{
+right: 0;
+}
