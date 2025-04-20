@@ -84,13 +84,16 @@
 .menu{
   height: 110vh;
   width: 100%;
-  background-color: cornsilk;
+  background-color: white;
   position: fixed;
   top: 0;
   right: -100%;
   padding: 13px 7px;
   transition: all 0.4s;
   display: none; 
+  z-index: 99999;
+
+
 }
 
 .menu.show {
