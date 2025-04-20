@@ -71,3 +71,47 @@
   border: 1px solid rgba(222, 222, 222, 1);
   border-radius: 1px;
 }
+
+
+/* Menu */
+.menu{
+  height: 110vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  padding: 13px 7px;
+  transition: all 0.4s;
+}
+.menu-logo-img{
+  padding: 0 15px;
+}
+.menu-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 43px;
+}
+.menu-close-btn{
+  background-color: transparent;
+  border: none;
+  margin-right: 15px;
+  
+}
+.menu-links-wrapper{
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.menu-link-item{
+  color: cornflowerblue;
+  transition: all 0.4s;
+}
+.menu-link-item:hover{
+  color:blue;
+}
+.show{
+right: 0;
+}
