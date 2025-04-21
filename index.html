@@ -19,7 +19,7 @@
 
 <body  class="bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen flex flex-col ">
   <!-- Header part -->
-  <header data-aos="fade-down">
+  <header data-aos="fade-down" class="sticky top-0 bg-white z-[999999]">
     <div  class="containers py-[17px]">
       <div class="flex justify-around items-center">
         <a class="inline-block" href="./index.html"> <img src="./images/logo-img.svg" alt="img"></a>
@@ -57,7 +57,7 @@
 <div class="menu">
   <div class="menu-wrapper">
     <a href="/">
-      <img class="menu-logo-img" src="./images/logo-img.svg" alt="Site Logo" width="300" height="150">
+      <img class="menu-logo-img" src="./images/logo-img.svg" alt="Site Logo" width="200" height="100">
     </a>
     <button class="menu-close-btn">
       <img src="./images/close.jpg" alt="Close img" width="50" height="50">
@@ -68,6 +68,14 @@
     <a class="menu-link-item" href="/">Customers</a>
     <a class="menu-link-item" href="/">Pricing</a>
     <a class="menu-link-item" href="/">Resources</a>
+    <button
+    class="hover:bg-[rgba(2,137,122,1)] hover:text-[rgba(255,255,255,1)] duration-300 bg-transparent rounded-[4px] border-[1px] border-[rgba(188,208,229,1)] w-[200px] px-[5px] py-[5px] text-[var(--color-text)] font-semibold text-[16px]">
+    Sign In
+  </button>
+  <button
+    class="hover:bg-transparent rounded-[4px] hover:border-[1px] hover:border-[rgba(188,208,229,1)] duration-300 bg-[rgba(2,137,122,1)] w-[200px] px-[5px] py-[5px] text-[rgba(255,255,255,1)] hover:text-[rgba(23,58,86,1)] font-semibold text-[16px]">
+    Sign up
+  </button>
   </div>
 </div>
 
